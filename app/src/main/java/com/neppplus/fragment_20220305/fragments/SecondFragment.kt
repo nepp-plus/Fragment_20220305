@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.neppplus.fragment_20220305.R
+import kotlinx.android.synthetic.main.fragment_second.*
 
 class SecondFragment : Fragment() {
 
@@ -20,6 +21,10 @@ class SecondFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        btnToastInFragment.setOnClickListener {
+            Toast.makeText(requireContext(), "토스트 띄우기", Toast.LENGTH_SHORT).show()
+        }
 
 
 
